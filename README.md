@@ -4,7 +4,6 @@ A set of NLP examples I created for CS 4395 - Human Language Technologies.
 An [Overview of NLP](Overview_of_NLP.pdf) is available as a quick explanation of these NLP examples.
 
 ## Program 1
----
 This program does basic text processing in Python. It will do the following:
 1. Read a provided CSV file
 2. Process the CSV file and adjust the formatting of each section as necessary
