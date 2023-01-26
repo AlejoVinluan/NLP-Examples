@@ -8,7 +8,7 @@ def process_name(name):
 # Isolates the first character of the middle initial and makes it uppercase
 #  If there is no middle character, return 'X'
 def process_middle(middle_initial):
-    if len(middle_initial) != 0:
+    if middle_initial:
         return middle_initial[0].upper()
     else:
         return 'X'
