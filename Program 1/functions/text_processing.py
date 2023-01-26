@@ -1,3 +1,4 @@
+# Regex is used to ensure proper formatting of ID and phone number
 import re
 
 # Capitalizes the first character and lower cases the remaining string
