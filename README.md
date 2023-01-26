@@ -13,6 +13,7 @@ This program does basic text processing in Python. It will do the following:
 
 In order to run the program, run the following command in the directory:
 > python main.py {csv_file}
+
 In order to use the sample data provided, run the following command in the directory:
 > python main.py data/data.csv
 
