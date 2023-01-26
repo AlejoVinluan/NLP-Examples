@@ -32,11 +32,6 @@ def read_file(filepath):
     except FileNotFoundError:
         print("Could not find file. Check spelling or file path.")
         exit(1)
-    # Except block used in case program quits
-    #  Example: User uses CTRL+C to quit the program
-    except:
-        print("Program exited unexpectedly.")
-        exit(1)
 
 # This runs once program is run
 if __name__ == '__main__':
