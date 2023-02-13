@@ -53,13 +53,14 @@ def printState(word, guess, points):
             print('_', end=' ')
     print('\n')
     # Prints total points
-    print("Point total:", points, "\n")
+    print("Point total:", points, '\n')
     return
 
 # Word game!
 def word_game(word_list):
+    seed(123)
     # Select a random word from word_list
-    word = word_list[randint(0,len(word_list))]
+    word = word_list[randint(0,len(word_list)-1)]
 
     print("Starting the Word Guessing Game!")
     print("Guess a word with", len(word), "letters.\n")
@@ -76,12 +77,12 @@ def word_game(word_list):
     # Maintain the game while player has more than 5 points
     while points >= 0:
         # Ask user for a guess
-        guess = input('Guess a letter: ')
+        guess = input('Guess a letter: ').lower()
         print()
 
         # Verify that the guess is 1 letter
-        if len(guess) != 1 and not guess.isalpha():
-            print("Make sure your guess is only 1 letter and is a letter.")
+        if len(guess) != 1 or not guess.isalpha():
+            print("Make sure your guess is only 1 letter and is a letter.\n")
             continue
 
         # Check if user quits the game
@@ -118,5 +119,5 @@ def word_game(word_list):
     # Check if user lose condition was met
     if points < 0:
         print("The word was", word)
-    print("Points:",points)
+    print("Total Points:",points)
 
