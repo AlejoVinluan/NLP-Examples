@@ -3,6 +3,7 @@ from nltk import pos_tag
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
+from random import randint, seed
 
 def pre_process(raw_text):
     # Tokenize the lowercase, raw text
@@ -14,7 +15,7 @@ def pre_process(raw_text):
     # Remove any stopwords located in array
     english_stopwords = set(stopwords.words('english'))
     tokenized_arr = [word for word in tokenized_arr if word not in english_stopwords]
-    
+
     # Remove any words with length less than or equal to 5
     tokenized_arr = [word for word in tokenized_arr if len(word) > 5]
 
@@ -35,7 +36,87 @@ def pre_process(raw_text):
     nouns = [noun[0] for noun in pos_tagged_arr if noun[1] == "NN"]
     num_nouns = len(nouns)
 
+    # Print the number of tokens and the number of nouns
     print("Number of tokens:", num_tokens)
-    print("Number of nouns:", num_nouns)
+    print("Number of nouns:", num_nouns, "\n")
 
+    # Return the tokens and the nouns
     return tokens_arr, nouns
+
+# Prints letters if letters have been guessed
+# Prints underscore if letters have not been guessed
+def printState(word, guess, points):
+    for c in word:
+        if c in guess:
+            print(c, end=' ')
+        else:
+            print('_', end=' ')
+    print('\n')
+    # Prints total points
+    print("Point total:", points, "\n")
+    return
+
+# Word game!
+def word_game(word_list):
+    # Select a random word from word_list
+    word = word_list[randint(0,len(word_list))]
+
+    print("Starting the Word Guessing Game!")
+    print("Guess a word with", len(word), "letters.\n")
+
+    # Start the player with 5 points
+    points = 5
+
+    # Create a set to add letters that have already been guessed
+    alreadyGuessed = set()
+
+    # Print initial state
+    printState(word,alreadyGuessed,points)
+
+    # Maintain the game while player has more than 5 points
+    while points >= 0:
+        # Ask user for a guess
+        guess = input('Guess a letter: ')
+        print()
+
+        # Verify that the guess is 1 letter
+        if len(guess) != 1 and not guess.isalpha():
+            print("Make sure your guess is only 1 letter and is a letter.")
+            continue
+
+        # Check if user quits the game
+        if guess == '!':
+            print("Detected `!`. Ending game.\n")
+            print("The word was", word)
+            break
+
+        # Check that letter is in word and if letter hasn't been guessed yet
+        if guess in word and guess not in alreadyGuessed:
+            print("Right!")
+            alreadyGuessed.add(guess)
+            # Add a point
+            points += 1
+            printState(word,alreadyGuessed,points)
+        # Edge case in case user guesses a letter they have already used
+        elif guess in word and guess in alreadyGuessed:
+            print("You already guessed this letter.")
+            points -= 1
+            printState(word,alreadyGuessed,points)
+        # Instance in which the lettter guess is wrong
+        else:
+            print("Sorry, guess again.")
+            points -= 1
+            printState(word,alreadyGuessed,points)
+        
+        # Check win condition
+        if len(alreadyGuessed) == len(set(word)):
+            print("You've guessed the word!")
+            break
+    
+    # Print the following once game ends
+    print("Game ended.")
+    # Check if user lose condition was met
+    if points < 0:
+        print("The word was", word)
+    print("Points:",points)
+
