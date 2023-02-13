@@ -31,10 +31,14 @@ This program does basic word processing utilizing NLTK. It begins by processing 
 3. Play a game with the user where the user must guess the word
 
 In order to run the program, run the following command in the directory:
-> python main.py
+> python main.py file.txt
+
+In order to utilize the sample data provided, use:
+> python main.py data/anat19.txt
 
 In order to play the game, please input a 1 letter guess to the terminal. For example:
 > e
+
 is a valid guess for the letter "e"
 
 The code is provided [here](/Program%202/)
