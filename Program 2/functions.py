@@ -58,7 +58,6 @@ def printState(word, guess, points):
 
 # Word game!
 def word_game(word_list):
-    seed(123)
     # Select a random word from word_list
     word = word_list[randint(0,len(word_list)-1)]
 

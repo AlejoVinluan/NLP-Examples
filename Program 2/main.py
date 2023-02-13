@@ -1,11 +1,23 @@
+import sys
 from nltk.tokenize import word_tokenize
 from functions import pre_process, word_game
 
 class Main:
-    # Read anat19.txt file
-    f = open('data/anat19.txt', 'r')
-    raw_arr = f.readlines()
-    f.close()
+    if len(sys.argv) <= 1:
+        print("Please use the program by using:")
+        print("python Main.py <file.txt>")
+        exit(1)
+
+    # Read File
+    raw_arr = []
+    try:
+        f = open(sys.argv[1], 'r')
+        raw_arr = f.readlines()
+        f.close()
+    except:
+        print("Could not find file", sys.argv[1])
+        exit(1)
+
     raw_text = ' '.join(raw_arr)
 
     # Tokenize the provided raw text
