@@ -23,3 +23,27 @@ In this assignment, I learned how to read a CSV file in Python. I also learned s
 I was able to review how to create Objects in Python and how to effectively utilize the Objects. I was also able to review how to read and write files in Python. I would like to improve in my code readability and organization. I feel like I could better organize my code so that it is easier to read.
 
 The code is provided [here](/Program%201/)
+
+## Program 2
+This program does basic word processing utilizing NLTK. It begins by processing a text file, then proceeds to create a word guessing game from the 50 most common nouns from the text file. It will do the following:
+1. Read the provided text file
+2. Process the text file to create a list of the 50 most common nouns in the file
+3. Play a game with the user where the user must guess the word
+
+In order to run the program, run the following command in the directory:
+> python main.py file.txt
+
+In order to utilize the sample data provided, use:
+> python main.py data/anat19.txt
+
+In order to play the game, please input a 1 letter guess to the terminal. For example:
+> e
+
+is a valid guess for the letter "e"
+
+The code is provided [here](/Program%202/)
+
+## Program 3
+This program explores basic skills for WordNet and SentiWordNet. It will also identify collocations. It takes different synsets for nouns and verbs, outputs their definitions, usage examples, and lemmas. Finally for the synsets, it traverses up the hyponym hierarchy. The program also explores SentiWordNet by finding emotionally-charged words and outputting their positive, negative, and objectivity scores. Finally, the program will identify collocations and find 1 collocation's PMI score.
+
+The program is set as a Jupyter notebook found [here](/Program%203/main.ipynb).
