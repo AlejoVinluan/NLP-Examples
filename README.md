@@ -42,3 +42,8 @@ In order to play the game, please input a 1 letter guess to the terminal. For ex
 is a valid guess for the letter "e"
 
 The code is provided [here](/Program%202/)
+
+## Program 3
+This program explores basic skills for WordNet and SentiWordNet. It will also identify collocations. It takes different synsets for nouns and verbs, outputs their definitions, usage examples, and lemmas. Finally for the synsets, it traverses up the hyponym hierarchy. The program also explores SentiWordNet by finding emotionally-charged words and outputting their positive, negative, and objectivity scores. Finally, the program will identify collocations and find 1 collocation's PMI score.
+
+The program is set as a Jupyter notebook found [here](/Program%203/main.ipynb).
