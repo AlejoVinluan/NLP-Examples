@@ -47,3 +47,9 @@ The code is provided [here](/Program%202/)
 This program explores basic skills for WordNet and SentiWordNet. It will also identify collocations. It takes different synsets for nouns and verbs, outputs their definitions, usage examples, and lemmas. Finally for the synsets, it traverses up the hyponym hierarchy. The program also explores SentiWordNet by finding emotionally-charged words and outputting their positive, negative, and objectivity scores. Finally, the program will identify collocations and find 1 collocation's PMI score.
 
 The program is set as a Jupyter notebook found [here](/Program%203/main.ipynb).
+
+## Program 4
+This program explores the usage of N-Grams. It will show an example of N-Grams in action by utilizing unigrams and bigrams to predict a statement's language with 97% accuracy. Furthermore, there a Narraritive is provided to give a further in depth analysis on N-grams.
+
+The program can be found [here](/Program%204/)
+The narrative can be found [here](/Program%204/AVinluan_Homework4.pdf)
