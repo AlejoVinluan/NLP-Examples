@@ -3,6 +3,8 @@ A set of NLP examples I created for CS 4395 - Human Language Technologies.
 
 An [Overview of NLP](Overview_of_NLP.pdf) is available as a quick explanation of these NLP examples.
 
+There is also a document on [Parsing Sentences](Parsing%20Sentences.pdf) that gives a brief explanation on how sentences are parsed.
+
 ## Program 1
 This program does basic text processing in Python. It will do the following:
 1. Read a provided CSV file
