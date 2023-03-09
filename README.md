@@ -55,3 +55,19 @@ This program explores the usage of N-Grams. It will show an example of N-Grams i
 
 The program can be found [here](/Program%204/)
 The narrative can be found [here](/Program%204/AVinluan_Homework4.pdf)
+
+
+## Program 5
+This program is a basic Web Scraper tool that scrapes the Wikipedia page for the NBA. It will initially scrape for all of the links from the Wikipedia page. 15 links are chosen at random, of which all text is scraped from the links.
+
+After cleaning the data and removing stop-words, the terms are sorted by frequency and the Top 40 are printed. A knowledge base is finally created from 10 of the 40 terms. The knowledge base is stored as a pickle file in the same directory.
+
+How to run:
+> python main.py
+
+
+Program execution takes some time since the files are actively being scraped and downloaded.
+
+
+The program can be found [here](/Program%205/)
+A document involving the program can be found [here](/Program%205/AVinluan_Homework5.pdf)
