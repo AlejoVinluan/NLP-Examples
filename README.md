@@ -61,6 +61,7 @@ After the pickle files have been created, run the next command in the directory:
 > python program2.py
 
 The program can be found [here](/Program%204/)
+
 The narrative can be found [here](/Program%204/AVinluan_Homework4.pdf)
 
 
@@ -77,4 +78,5 @@ Program execution takes some time since the files are actively being scraped and
 
 
 The program can be found [here](/Program%205/)
+
 A document involving the program can be found [here](/Program%205/AVinluan_Homework5.pdf)
