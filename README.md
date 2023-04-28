@@ -80,3 +80,36 @@ Program execution takes some time since the files are actively being scraped and
 The program can be found [here](/Program%205/)
 
 A document involving the program can be found [here](/Program%205/AVinluan_Homework5.pdf)
+
+
+## Program 6
+
+This notebook focuses on finding out whether a news article is real or fake given the title, text, and subject of the article. It will utilize sklearn by using Naive Bayes, Logistic Regression, and Neural Networks to predict whether or not the articles are real or fake.
+
+The notebook can be found [here](/Program%206/AVinluan_TextClassification.pdf)
+
+
+## Program 7
+
+This Jupyter notebook will attempt to classify whether or not a text message is spam or not based on more than 40,000 spam messages.
+
+The notebook can be found [here](/Program%207/main.ipynb).
+
+
+## Program 8
+
+This is an NLP Chatbot that focuses on the discussion of Youtube videos. It utilizes NLP techniques like sentiment analysis and word frequency to create the responses for the video.
+
+How to run:
+> python main.py
+
+
+Program execution will take longer than usual time due to the API calls created by the program. It utilzes multiple API's to scrape live data from the Youtube video.
+
+The program can be found [here](/Program%208/)
+
+A document involving the program can be found [here](/Program%208/ChatBotFinalReport_ttv170230_abv210001.pdf)
+
+
+
+[Index](index.md)
